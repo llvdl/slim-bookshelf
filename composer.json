@@ -1,32 +1,34 @@
 {
     "name": "akrabat/slim-bookshelf",
-    "description": "Example Slim Framework 3 application.",
+    "description": "Alternative Example Slim Framework 3 application. Original by Rob Allen, see https://github.com/akrabat/slim-bookshelf.",
     "license": "BSD-3-Clause",
     "type": "project",
     "keywords": ["slim-framework"],
     "authors": [
         {
-            "name": "Rob Allen",
-            "email": "rob@akrabat.com",
-            "homepage": "http://akrabat.com"
+            "name": "Lennaert van der Linden",
+            "email": "lennaertvanderlinden@gmail.com",
+            "homepage": "https://github.com/llvdl"
         }
     ],
     "autoload": {
         "psr-4": {
-            "Bookshelf\\": "app/src/Bookshelf"
+            "Bookshelf\\": "src/Bookshelf/"
         }
     },
     "require": {
         "slim/slim": "^3.0",
         "slim/twig-view": "^1.0",
-        "illuminate/database": "~5.2",
-        "vlucas/valitron": "^1.2",
         "slim/csrf": "^0.3.3",
-        "slim/flash": "^0.1.0"
+        "slim/flash": "^0.1.0",
+        "php-di/slim-bridge": "^1.0",
+        "atlas/orm": "^1.2",
+        "davidepastore/slim-validation": "^0.5.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5",
-        "phpunit/phpunit": "^5.2"
+        "phpunit/phpunit": "^5.2",
+        "atlas/cli": "^1.0"
     },
     "scripts": {
         "test": [

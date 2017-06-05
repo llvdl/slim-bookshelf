@@ -12,7 +12,7 @@
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory>./app/src/</directory>
+            <directory>./src/</directory>
         </whitelist>
     </filter>
 </phpunit>

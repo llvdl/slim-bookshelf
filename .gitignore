@@ -2,3 +2,4 @@
 vendor
 bin
 cache
+app/config/settings.php
