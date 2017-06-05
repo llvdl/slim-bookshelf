@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookshelf\Repository\Mapper\Traits;
+namespace Bookshelf\Database\DomainMapper\Traits;
 
 trait PropertySetter
 {

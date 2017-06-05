@@ -1,12 +1,12 @@
 <?php
 
-namespace Bookshelf\Repository;
+namespace Bookshelf\Database\Repository;
 
 use Atlas\Orm\Atlas;
 use Bookshelf\Domain\Author;
 use Bookshelf\Domain\Book;
-use Bookshelf\Mapper\BookMapper;
-use Bookshelf\Repository\Mapper\BookRecordMapper;
+use Bookshelf\Database\TableMapper\BookMapper;
+use Bookshelf\Database\DomainMapper\BookRecordMapper;
 use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
 
 class BookRepository implements BookRepositoryInterface
@@ -28,7 +28,11 @@ class BookRepository implements BookRepositoryInterface
      */
     public function findAll(): array
     {
-        $records = $this->atlas->select(BookMapper::class)->with(['author'])->fetchRecordSet();
+        $records = $this
+            ->atlas
+            ->select(BookMapper::class)
+            ->with(['author'])
+            ->fetchRecordSet();
 
         return $this->bookRecordMapper->mapRecordsToBooks($records);
     }

@@ -1,12 +1,12 @@
 <?php
 
-namespace Bookshelf\Repository;
+namespace Bookshelf\Database\Repository;
 
 use Atlas\Orm\Mapper\RecordInterface;
 use Bookshelf\Domain\Author;
 use Atlas\Orm\Atlas;
-use Bookshelf\Mapper\AuthorMapper;
-use Bookshelf\Repository\Mapper\AuthorRecordMapper;
+use Bookshelf\Database\TableMapper\AuthorMapper;
+use Bookshelf\Database\DomainMapper\AuthorRecordMapper;
 use Bookshelf\Domain\AuthorRepository as AuthorRepositoryInterface;
 
 class AuthorRepository implements AuthorRepositoryInterface

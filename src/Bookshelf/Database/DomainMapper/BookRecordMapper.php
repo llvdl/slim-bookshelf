@@ -1,10 +1,8 @@
 <?php
 
-namespace Bookshelf\Repository\Mapper;
+namespace Bookshelf\Database\DomainMapper;
 
-use Bookshelf\Repository\Mapper\Traits;
 use Bookshelf\Domain\Book;
-use Bookshelf\Repository\Mapper\AuthorRecordMapper;
 use Atlas\Orm\Mapper\RecordInterface;
 
 class BookRecordMapper

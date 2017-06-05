@@ -11,12 +11,12 @@ use Slim\Http\Response;
 use Bookshelf\View\ViewInterface;
 use Slim\Interfaces\RouterInterface;
 use Slim\Views\Twig;
-use Bookshelf\Mapper\AuthorMapper;
-use Bookshelf\Mapper\BookMapper;
+use Bookshelf\Database\TableMapper\AuthorMapper;
+use Bookshelf\Database\TableMapper\BookMapper;
 use Bookshelf\Domain\AuthorRepository as AuthorRepositoryInterface;
-use Bookshelf\Repository\AuthorRepository;
+use Bookshelf\Database\Repository\AuthorRepository;
 use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
-use Bookshelf\Repository\BookRepository;
+use Bookshelf\Database\Repository\BookRepository;
 
 return [
     ViewInterface::class => function (ContainerInterface $c) {

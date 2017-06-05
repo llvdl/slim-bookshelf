@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookshelf\Mapper;
+namespace Bookshelf\Database\TableMapper;
 
 use Atlas\Orm\Mapper\AbstractMapper;
 

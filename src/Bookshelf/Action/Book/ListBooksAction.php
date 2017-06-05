@@ -2,12 +2,11 @@
 
 namespace Bookshelf\Action\Book;
 
-use Bookshelf\Repository\BookRepository;
+use Bookshelf\Domain\BookRepository;
 use Bookshelf\View\ViewInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Bookshelf\Book;
 
 class ListBooksAction
 {

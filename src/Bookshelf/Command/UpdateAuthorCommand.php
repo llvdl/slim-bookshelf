@@ -2,7 +2,7 @@
 
 namespace Bookshelf\Command;
 
-use Bookshelf\Repository\AuthorRepository;
+use Bookshelf\Domain\AuthorRepository;
 use Bookshelf\Domain\Author;
 
 class UpdateAuthorCommand
