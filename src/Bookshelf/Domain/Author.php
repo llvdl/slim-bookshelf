@@ -20,8 +20,8 @@ class Author
         Assertion::notEmpty($name);
         Assertion::maxLength($name, 100);
 
-        $this->name = $name;
-        $this->biography = $biography;
+        $this->setName($name);
+        $this->setBiography($biography);
     }
 
     public function getId(): ?int
@@ -41,7 +41,24 @@ class Author
 
     public function update(string $name, ?string $biography): void
     {
+        $this->setName($name);
+        $this->setBiography($biography);
+    }
+
+    private function setName(string $name): void
+    {
+        Assertion::notEmpty($name);
+        Assertion::maxLength($name, 100);
+
         $this->name = $name;
-        $this->biography = trim($biography) === '' ? null : $biography;
+    }
+
+    private function setBiography(?string $biography): void
+    {
+        if (trim($biography) === '') {
+            $biography = null;
+        }
+
+        $this->biography = $biography;
     }
 }

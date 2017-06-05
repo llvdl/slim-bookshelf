@@ -21,7 +21,7 @@ class Book
     public function __construct(string $title, Author $author, ?string $isbn)
     {
         Assertion::notEmpty($title);
-        Assertion::maxLength($isbn, 13);
+        Assertion::nullOrMaxLength($isbn, 13);
 
         $this->title = $title;
         $this->author = $author;
