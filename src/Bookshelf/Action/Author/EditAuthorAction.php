@@ -3,13 +3,12 @@
 namespace Bookshelf\Action\Author;
 
 use Bookshelf\Command\UpdateAuthorCommand;
-use Bookshelf\Repository\AuthorRepository;
+use Bookshelf\Domain\AuthorRepository;
 use Bookshelf\View\ViewInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
 use Slim\Flash\Messages;
-use Bookshelf\Author;
 use Slim\Interfaces\RouterInterface;
 
 class EditAuthorAction

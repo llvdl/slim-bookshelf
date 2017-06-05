@@ -13,6 +13,10 @@ use Slim\Interfaces\RouterInterface;
 use Slim\Views\Twig;
 use Bookshelf\Mapper\AuthorMapper;
 use Bookshelf\Mapper\BookMapper;
+use Bookshelf\Domain\AuthorRepository as AuthorRepositoryInterface;
+use Bookshelf\Repository\AuthorRepository;
+use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
+use Bookshelf\Repository\BookRepository;
 
 return [
     ViewInterface::class => function (ContainerInterface $c) {
@@ -68,5 +72,11 @@ return [
         $atlas = $c->get(AtlasContainer::class)->getAtlas();
 
         return $atlas;
+    },
+    AuthorRepositoryInterface::class => function (ContainerInterface $c) {
+        return $c->get(AuthorRepository::class);
+    },
+    BookRepositoryInterface::class => function (ContainerInterface $c) {
+        return $c->get(BookRepository::class);
     }
 ];

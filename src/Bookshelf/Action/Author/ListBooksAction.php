@@ -2,8 +2,8 @@
 
 namespace Bookshelf\Action\Author;
 
-use Bookshelf\Repository\BookRepository;
-use Bookshelf\Repository\AuthorRepository;
+use Bookshelf\Domain\BookRepository;
+use Bookshelf\Domain\AuthorRepository;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;

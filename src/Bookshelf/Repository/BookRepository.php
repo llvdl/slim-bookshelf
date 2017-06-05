@@ -7,8 +7,9 @@ use Bookshelf\Domain\Author;
 use Bookshelf\Domain\Book;
 use Bookshelf\Mapper\BookMapper;
 use Bookshelf\Repository\Mapper\BookRecordMapper;
+use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
 
-class BookRepository
+class BookRepository implements BookRepositoryInterface
 {
     /** @var Atlas */
     private $atlas;
