@@ -2,7 +2,7 @@
 
 namespace Bookshelf\Database\DomainMapper;
 
-use Bookshelf\Domain\Book;
+use Bookshelf\Domain\Entity\Book;
 use Atlas\Orm\Mapper\RecordInterface;
 
 class BookRecordMapper

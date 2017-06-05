@@ -2,8 +2,8 @@
 
 namespace Bookshelf\Action\Author;
 
-use Bookshelf\Domain\BookRepository;
-use Bookshelf\Domain\AuthorRepository;
+use Bookshelf\Domain\Repository\AuthorRepository;
+use Bookshelf\Domain\Repository\BookRepository;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
@@ -20,8 +20,11 @@ class ListBooksAction
     /** @var ViewInterface */
     private $view;
 
-    public function __construct(AuthorRepository $authorRepository, BookRepository $bookRepository, ViewInterface $view)
-    {
+    public function __construct(
+        AuthorRepository $authorRepository,
+        BookRepository $bookRepository,
+        ViewInterface $view
+    ) {
         $this->authorRepository = $authorRepository;
         $this->bookRepository = $bookRepository;
         $this->view = $view;

@@ -1,6 +1,8 @@
 <?php
 
-namespace Bookshelf\Domain;
+namespace Bookshelf\Domain\Repository;
+
+use Bookshelf\Domain\Entity\Author;
 
 interface AuthorRepository
 {

@@ -6,7 +6,7 @@ use Bookshelf\View\ViewInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Bookshelf\Domain\AuthorRepository;
+use Bookshelf\Domain\Repository\AuthorRepository;
 
 class ListAuthorsAction
 {

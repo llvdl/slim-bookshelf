@@ -1,6 +1,9 @@
 <?php
 
-namespace Bookshelf\Domain;
+namespace Bookshelf\Domain\Repository;
+
+use Bookshelf\Domain\Entity\Author;
+use Bookshelf\Domain\Entity\Book;
 
 interface BookRepository
 {

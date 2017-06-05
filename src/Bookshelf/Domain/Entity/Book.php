@@ -1,6 +1,6 @@
 <?php
 
-namespace Bookshelf\Domain;
+namespace Bookshelf\Domain\Entity;
 
 use Assert\Assertion;
 

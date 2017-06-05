@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\Bookshelf\Domain;
+namespace Tests\Bookshelf\Domain\Entity;
 
 use InvalidArgumentException;
 use PHPUnit_Framework_TestCase;
 
-use Bookshelf\Domain\Author;
+use Bookshelf\Domain\Entity\Author;
 
 class AuthorTest extends PHPUnit_Framework_TestCase
 {

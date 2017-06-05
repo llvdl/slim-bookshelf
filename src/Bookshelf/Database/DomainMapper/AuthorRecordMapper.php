@@ -3,7 +3,7 @@
 namespace Bookshelf\Database\DomainMapper;
 
 use Atlas\Orm\Mapper\RecordInterface;
-use Bookshelf\Domain\Author;
+use Bookshelf\Domain\Entity\Author;
 use Atlas\Orm\Atlas;
 
 class AuthorRecordMapper

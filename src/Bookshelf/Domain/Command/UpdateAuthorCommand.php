@@ -1,9 +1,9 @@
 <?php
 
-namespace Bookshelf\Command;
+namespace Bookshelf\Domain\Command;
 
-use Bookshelf\Domain\AuthorRepository;
-use Bookshelf\Domain\Author;
+use Bookshelf\Domain\Repository\AuthorRepository;
+use Bookshelf\Domain\Entity\Author;
 use Psr\Log\LoggerInterface;
 
 class UpdateAuthorCommand

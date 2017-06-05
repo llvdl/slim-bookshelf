@@ -2,8 +2,8 @@
 
 namespace Bookshelf\Action\Author;
 
-use Bookshelf\Command\UpdateAuthorCommand;
-use Bookshelf\Domain\AuthorRepository;
+use Bookshelf\Domain\Command\UpdateAuthorCommand;
+use Bookshelf\Domain\Repository\AuthorRepository;
 use Bookshelf\View\ViewInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;

@@ -2,7 +2,7 @@
 
 namespace Bookshelf\Action\Book;
 
-use Bookshelf\Domain\BookRepository;
+use Bookshelf\Domain\Repository\BookRepository;
 use Bookshelf\View\ViewInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Http\Request;

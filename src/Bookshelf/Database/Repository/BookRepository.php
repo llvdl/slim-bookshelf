@@ -3,11 +3,11 @@
 namespace Bookshelf\Database\Repository;
 
 use Atlas\Orm\Atlas;
-use Bookshelf\Domain\Author;
-use Bookshelf\Domain\Book;
+use Bookshelf\Domain\Entity\Author;
+use Bookshelf\Domain\Entity\Book;
 use Bookshelf\Database\TableMapper\BookMapper;
 use Bookshelf\Database\DomainMapper\BookRecordMapper;
-use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
+use Bookshelf\Domain\Repository\BookRepository as BookRepositoryInterface;
 
 class BookRepository implements BookRepositoryInterface
 {
