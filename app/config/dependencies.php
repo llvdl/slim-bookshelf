@@ -4,6 +4,7 @@ use Atlas\Orm\Atlas;
 use Atlas\Orm\AtlasContainer;
 use Interop\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Log\LoggerInterface;
 use Slim\Csrf\Guard;
 use Slim\Flash\Messages;
 use Slim\Http\Request;
@@ -17,6 +18,8 @@ use Bookshelf\Domain\AuthorRepository as AuthorRepositoryInterface;
 use Bookshelf\Database\Repository\AuthorRepository;
 use Bookshelf\Domain\BookRepository as BookRepositoryInterface;
 use Bookshelf\Database\Repository\BookRepository;
+use Monolog\Logger;
+use Monolog\Handler\ErrorLogHandler;
 
 return [
     ViewInterface::class => function (ContainerInterface $c) {
@@ -78,5 +81,14 @@ return [
     },
     BookRepositoryInterface::class => function (ContainerInterface $c) {
         return $c->get(BookRepository::class);
+    },
+    LoggerInterface::class => function (ContainerInterface $c) {
+        $logger = new Logger('app_logger');
+        $logger->pushHandler(new ErrorLogHandler());
+
+        return $logger;
+    },
+    Messages::class => function (ContainerInterface $c) {
+        return new Messages();
     }
 ];
