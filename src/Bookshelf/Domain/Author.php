@@ -2,6 +2,8 @@
 
 namespace Bookshelf\Domain;
 
+use Assert\Assertion;
+
 class Author
 {
     /** @var int */
@@ -15,6 +17,9 @@ class Author
 
     public function __construct(string $name, ?string $biography)
     {
+        Assertion::notEmpty($name);
+        Assertion::maxLength($name, 100);
+
         $this->name = $name;
         $this->biography = $biography;
     }

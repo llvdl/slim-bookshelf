@@ -24,7 +24,8 @@
         "php-di/slim-bridge": "^1.0",
         "atlas/orm": "^1.2",
         "davidepastore/slim-validation": "^0.5.0",
-        "monolog/monolog": "^1.22"
+        "monolog/monolog": "^1.22",
+        "beberlei/assert": "^2.7"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5",

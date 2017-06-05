@@ -1,7 +1,7 @@
 # Slim Bookshelf
 
-This is alternative implementation of the simple Slim 3 application that manages a list of books
-by [Rob Allen](https://github.com/akrabat).
+This is alternative implementation of the simple Slim 3 application that manages a list of books.
+The original is written by [Rob Allen](https://github.com/akrabat).
 
 It uses the following setup:
 
@@ -9,12 +9,11 @@ It uses the following setup:
 * [Atlas ORM](https://github.com/atlasphp/Atlas.Orm) to map database records to plain old PHP objects in
 the Domain layer using repositories, instead of [Eloquent](https://laravel.com/docs/5.4/eloquent) ActiveRecord
 * [Slim-Validation](https://github.com/DavidePastore/Slim-Validation) middleware instead of [Valitron](https://github.com/vlucas/valitron)
+* [Monolog](https://github.com/Seldaek/monolog) for logging
 
 ## To do
 
 * Add tests
-* Add validation in domain entities
-
 
 ## Vagrant
 
