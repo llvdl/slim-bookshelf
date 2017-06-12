@@ -28,7 +28,8 @@ return [
         // Add extensions
         $twig->addExtension(new Slim\Views\TwigExtension($c->get('router'), $c->get('request')->getUri()));
         $twig->addExtension(new Twig_Extension_Debug());
-        $twig->addExtension(new Bookshelf\Twig\TwigExtension($c->get(Messages::class)));
+
+        $twig->getEnvironment()->addGlobal('flash_messages', $c->get(Messages::class)); 
 
         return new class($twig) implements ViewInterface {
             /** @var Twig */

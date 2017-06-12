@@ -4,8 +4,6 @@
 {% block title %}{{title}}{% endblock %}
 
 {% block content %}
-<h1>{{title}}</h1>
-
 <ul>
 {% for book in books %}
     <li>{{ book.title }} <a href="{{base_url()}}{{ path_for('author', {authorId: book.author.id}) }}">({{ book.author.name }})</a></li>

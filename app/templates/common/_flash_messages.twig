@@ -1,0 +1,10 @@
+{% for key, class in {'message': 'alert-success', 'error': 'alert-danger'} %}
+    {% if flash_messages.messages[key] is defined %}
+        <div class="alert {{ class }} alert-dismissable fade in">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&#xD7;</span><span class="sr-only">Close</span>
+            </button>
+            {{ flash_messages.messages[key]|join(', ') }}
+        </div>
+    {% endif %}
+{% endfor %}

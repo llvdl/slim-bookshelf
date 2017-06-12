@@ -41,6 +41,9 @@
     {% endblock %}
 
     <div id="layout" class="container">
+        <h1>{{title}}</h1>
+        
+        {% include 'common/_flash_messages.twig' %}
         {% block content %}{% endblock %}
 
         <footer>
@@ -48,8 +51,6 @@
             Original bookshelf source code on <a href="https://github.com/akrabat/slim-bookshelf">GitHub</a>
         </footer>
     </div>
-
-
 
     <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>

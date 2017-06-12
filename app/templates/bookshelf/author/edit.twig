@@ -4,9 +4,6 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
-
-
 <form method="POST" action="{{ path_for('edit-author', {authorId: author.id}) }}">
     {% if errors.form %}
     <div class="form-group has-error">
